@@ -11,9 +11,9 @@ namespace SoundApp
         static void Main(string[] args)
         {
             //XOR.RunXOR(args);
-            SoundSnippet soundSnippet = new SoundSnippet();
-
-            soundSnippet.FromFile("Sweet Emotion.mp3");
+            SoundSnippet soundSnippet = new SoundSnippet("Blue Moon");
+            soundSnippet.FromFile();
+            Console.ReadKey();
         }
     }
 }

@@ -16,4 +16,3 @@ C:\Users\Morits Wille\Documents\Dev\Science-Project-2017\SoundApp\SoundApp\obj\D
 C:\Users\Morits Wille\Documents\Dev\Science-Project-2017\SoundApp\SoundApp\obj\Debug\SoundApp.pdb
 C:\Users\Morits Wille\Documents\Dev\Science-Project-2017\SoundApp\SoundApp\bin\Debug\NAudio.dll
 C:\Users\Morits Wille\Documents\Dev\Science-Project-2017\SoundApp\SoundApp\bin\Debug\NAudio.xml
-C:\Users\Morits Wille\Documents\Dev\Science-Project-2017\SoundApp\SoundApp\bin\Debug\SoundTouch.Net.dll
