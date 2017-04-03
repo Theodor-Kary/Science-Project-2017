@@ -51,7 +51,7 @@ namespace SoundApp
 
             //Read audio file
             AudioFileReader audioFileReader = new AudioFileReader(mp3Path);
-            LengthSeconds = audioFileReader.TotalTime.Seconds;
+            LengthSeconds = Convert.ToInt32(audioFileReader.TotalTime.TotalSeconds);
             int SampleRate = audioFileReader.WaveFormat.SampleRate;
             float[] soundSamples = new float[SampleRate*10];
             audioFileReader.Read(new float[SampleRate*(LengthSeconds/2)], 0, SampleRate * (LengthSeconds / 2));
