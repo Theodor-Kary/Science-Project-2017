@@ -130,8 +130,8 @@ namespace SoundApp
             Dataset = new double[]{
                 Normalize(0, 200, BPM),
                 Normalize(0, 600, LengthSeconds),
-                Values[0], Values[1],
-                Values[2], Values[3]
+                Normalize(0,500, Values[0]), Normalize(0,500, Values[1]),
+                Normalize(0,500, Values[2]), Normalize(0,500, Values[3])
 
             };
         }
