@@ -42,7 +42,6 @@ namespace SoundApp
                 case "run":
                     Console.WriteLine("What song would you like to run?");
                     var snippet = new SoundSnippet(Console.ReadLine());
-                    snippet.FromFile();
                     double[] result = network.Run(snippet);
                     Console.WriteLine(result[0].ToString() + ",  " + result[1].ToString() + ",  " + result[2].ToString() + ",  " + result[3].ToString() + ",  ");
 

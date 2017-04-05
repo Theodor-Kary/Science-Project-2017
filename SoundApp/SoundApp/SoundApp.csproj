@@ -61,7 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BPMDetector.cs" />
+    <Compile Include="CircularBuffer.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IIRFilter.cs" />
     <Compile Include="MusicNetwork.cs" />
+    <Compile Include="PitchDsp.cs" />
+    <Compile Include="PitchTracker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SoundSnippet.cs" />
     <Compile Include="XOR.cs" />
