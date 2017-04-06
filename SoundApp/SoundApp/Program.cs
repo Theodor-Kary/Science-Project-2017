@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace SoundApp
                     Console.WriteLine("What song would you like to run?");
                     var snippet = new SoundSnippet(Console.ReadLine());
                     double[] result = network.Run(snippet);
-                    Console.WriteLine(result[0].ToString() + ",  " + result[1].ToString() + ",  " + result[2].ToString() + ",  " + result[3].ToString() + ",  ");
+                    Console.WriteLine(result[0].ToString("G", CultureInfo.InvariantCulture) + " Rock \n" + result[1].ToString("G", CultureInfo.InvariantCulture) + " Classical \n" + result[2].ToString("G", CultureInfo.InvariantCulture) + " Jazz \n" + result[3].ToString("G", CultureInfo.InvariantCulture) + " Hip-Hop \n");
 
                     break;
                 case "exit":

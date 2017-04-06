@@ -64,24 +64,29 @@ namespace SoundApp
 
         public void Train (int cycleCount)
         {
+            double meanError = 0;
             if (trainingSet.Count < 20) Initialize();
             ActivationNetwork trainingNetwork = new ActivationNetwork(new SigmoidFunction(2), 6, 6, 4, 4);
             BackPropagationLearning teacher = new BackPropagationLearning(trainingNetwork);
+
 
             //teacher.Run(trainingSet[0].Dataset,trainingSet[0].Genre);
             for (int i = 0; i < cycleCount; i++)
             {
                 foreach (SoundSnippet snippet in trainingSet)
                 {
-                    teacher.Run(
+                    meanError += teacher.Run(
                     snippet.Dataset,
                     snippet.Genre);
                 }
             }
 
+            meanError = meanError / (cycleCount * trainingSet.Count);
+
             network = trainingNetwork;
             network.Save(networkPath);
             Console.WriteLine("Done!");
+            Console.WriteLine("Error rate: " + Convert.ToString(meanError));
         }
 
         public double[] Run(SoundSnippet song)

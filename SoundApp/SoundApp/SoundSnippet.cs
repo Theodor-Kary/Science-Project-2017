@@ -46,7 +46,7 @@ namespace SoundApp
 
             if (!File.Exists(Environment.CurrentDirectory + @"\" + wavePath))
             {
-                using (Mp3FileReader reader = new Mp3FileReader(mp3Path))
+                using ( Mp3FileReader reader = new Mp3FileReader(mp3Path))
                 {
                     using (WaveStream pcmStream = WaveFormatConversionStream.CreatePcmStream(reader))
                     {
@@ -74,6 +74,12 @@ namespace SoundApp
             PitchTracker pitchTracker = new PitchTracker();
             pitchTracker.PitchRecordsPerSecond = 100;
             pitchTracker.RecordPitchRecords = true;
+
+
+
+
+
+
             pitchTracker.SampleRate = 44100.0;
 
             pitchTracker.ProcessBuffer(soundSamples1);
