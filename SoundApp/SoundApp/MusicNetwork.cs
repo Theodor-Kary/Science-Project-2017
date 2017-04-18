@@ -68,7 +68,7 @@ namespace SoundApp
             if (trainingSet.Count < 20) Initialize();
             ActivationNetwork trainingNetwork = new ActivationNetwork(new SigmoidFunction(2), 6, 6, 4, 4);
             BackPropagationLearning teacher = new BackPropagationLearning(trainingNetwork);
-
+            teacher.Momentum = 0.1;
 
             //teacher.Run(trainingSet[0].Dataset,trainingSet[0].Genre);
             for (int i = 0; i < cycleCount; i++)
